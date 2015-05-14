@@ -58,7 +58,7 @@ public class ARModel : MonoBehaviour {
 	        RaycastHit hit;
 	        // Cast a ray of distance 100, and check if this
 	        // collider is hit.
-	        if (collider.Raycast (ray, out hit, 100.0f)) {
+	        if (GetComponent<Collider>().Raycast (ray, out hit, 100.0f)) {
 				SoundUtil.getInstance().buttonPlay(gameObject);
 	            return true;
 	        }

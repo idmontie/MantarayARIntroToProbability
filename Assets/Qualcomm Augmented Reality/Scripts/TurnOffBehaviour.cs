@@ -1,32 +1,35 @@
 /*==============================================================================
-Copyright (c) 2010-2013 Qualcomm Connected Experiences, Inc.
+Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
 ==============================================================================*/
 
 using UnityEngine;
 
-/// <summary>
-/// A utility behaviour to disable rendering of a game object at run time.
-/// </summary>
-public class TurnOffBehaviour : TurnOffAbstractBehaviour
+namespace Vuforia
 {
-
-    #region UNITY_MONOBEHAVIOUR_METHODS
-
-    void Awake()
+    /// <summary>
+    /// A utility behaviour to disable rendering of a game object at run time.
+    /// </summary>
+    public class TurnOffBehaviour : TurnOffAbstractBehaviour
     {
-        if (QCARRuntimeUtilities.IsQCAREnabled())
+
+        #region UNITY_MONOBEHAVIOUR_METHODS
+
+        void Awake()
         {
-            // We remove the mesh components at run-time only, but keep them for
-            // visualization when running in the editor:
-            MeshRenderer targetMeshRenderer = this.GetComponent<MeshRenderer>();
-            Destroy(targetMeshRenderer);
-            MeshFilter targetMesh = this.GetComponent<MeshFilter>();
-            Destroy(targetMesh);
+            if (QCARRuntimeUtilities.IsQCAREnabled())
+            {
+                // We remove the mesh components at run-time only, but keep them for
+                // visualization when running in the editor:
+                MeshRenderer targetMeshRenderer = this.GetComponent<MeshRenderer>();
+                Destroy(targetMeshRenderer);
+                MeshFilter targetMesh = this.GetComponent<MeshFilter>();
+                Destroy(targetMesh);
+            }
         }
+
+        #endregion // UNITY_MONOBEHAVIOUR_METHODS
+
     }
-
-    #endregion // UNITY_MONOBEHAVIOUR_METHODS
-
 }

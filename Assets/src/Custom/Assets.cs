@@ -40,8 +40,8 @@ public class Assets
 		SickFish.Add(Resources.Load("ModelPrefabs/prussiancarb_affected") as GameObject);
 		SickFish.Add(Resources.Load("ModelPrefabs/tench_affected") as GameObject);
 		
-		LakeErie = "CoralReef1";
-		BayArea = "CoralReef3";
+		LakeErie = "ImageTarget";
+		BayArea = "ImageTarget";
 		
 		this.random = new System.Random();
 	}

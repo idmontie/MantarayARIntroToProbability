@@ -1,5 +1,5 @@
-﻿/*==============================================================================
-Copyright (c) 2013 Qualcomm Connected Experiences, Inc.
+/*==============================================================================
+Copyright (c) 2013-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Qualcomm Confidential and Proprietary
 ==============================================================================*/
@@ -7,17 +7,20 @@ Qualcomm Confidential and Proprietary
 using System.IO;
 using UnityEditor;
 
-/// <summary>
-/// Small utility class to create an instance of the VuforiaBehaviourComponentFactory in the editor before anything is initialized.
-/// </summary>
-[InitializeOnLoad]
-public class ComponentFactoryStarter
+namespace Vuforia.EditorClasses
 {
     /// <summary>
-    /// register an instance of the VuforiaBehaviourComponentFactory class at the singleton immediately
+    /// Small utility class to create an instance of the VuforiaBehaviourComponentFactory in the editor before anything is initialized.
     /// </summary>
-    static ComponentFactoryStarter()
+    [InitializeOnLoad]
+    public class ComponentFactoryStarter
     {
-        BehaviourComponentFactory.Instance = new VuforiaBehaviourComponentFactory();
+        /// <summary>
+        /// register an instance of the VuforiaBehaviourComponentFactory class at the singleton immediately
+        /// </summary>
+        static ComponentFactoryStarter()
+        {
+            BehaviourComponentFactory.Instance = new VuforiaBehaviourComponentFactory();
+        }
     }
 }

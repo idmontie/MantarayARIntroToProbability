@@ -1,35 +1,38 @@
 ﻿/*==============================================================================
-Copyright (c) 2010-2013 Qualcomm Connected Experiences, Inc.
+Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
 ==============================================================================*/
 
 using UnityEngine;
 
-/// <summary>
-/// A utility behaviour to disable rendering of a word behaviour at run time.
-/// </summary>
-public class TurnOffWordBehaviour : MonoBehaviour
+namespace Vuforia
 {
-
-    #region UNITY_MONOBEHAVIOUR_METHODS
-
-    void Awake()
+    /// <summary>
+    /// A utility behaviour to disable rendering of a word behaviour at run time.
+    /// </summary>
+    public class TurnOffWordBehaviour : MonoBehaviour
     {
-        if (QCARRuntimeUtilities.IsQCAREnabled())
+
+        #region UNITY_MONOBEHAVIOUR_METHODS
+
+        void Awake()
         {
-            // We remove the renderer at run-time only, but keep it for
-            // visualization when running in the editor
-            // We keep the MeshFilter for retreiving the size of the Word-prefab
-            MeshRenderer targetMeshRenderer = this.GetComponent<MeshRenderer>();
-            Destroy(targetMeshRenderer);
-            //The child object for visualizing text is removed at runtime
-            var text = transform.FindChild("Text");
-            if(text != null)
-                Destroy(text.gameObject);
+            if (QCARRuntimeUtilities.IsQCAREnabled())
+            {
+                // We remove the renderer at run-time only, but keep it for
+                // visualization when running in the editor
+                // We keep the MeshFilter for retreiving the size of the Word-prefab
+                MeshRenderer targetMeshRenderer = this.GetComponent<MeshRenderer>();
+                Destroy(targetMeshRenderer);
+                //The child object for visualizing text is removed at runtime
+                var text = transform.FindChild("Text");
+                if(text != null)
+                    Destroy(text.gameObject);
+            }
         }
+
+        #endregion // UNITY_MONOBEHAVIOUR_METHODS
+
     }
-
-    #endregion // UNITY_MONOBEHAVIOUR_METHODS
-
 }

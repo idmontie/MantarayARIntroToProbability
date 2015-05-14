@@ -181,10 +181,10 @@ public class FishBehavior : MonoBehaviour {
 			else {
 				if (model.Processed) {
 					Transform child = model.transform.GetChild(0);
-					if (child.renderer.material.color.a > 0.0) {
-						Color c = child.renderer.material.color;
+					if (child.GetComponent<Renderer>().material.color.a > 0.0) {
+						Color c = child.GetComponent<Renderer>().material.color;
 						c.a = c.a - 0.02f;
-						child.renderer.material.color = c;
+						child.GetComponent<Renderer>().material.color = c;
 					}
 					else {
 						// Let the Experience know about this fish

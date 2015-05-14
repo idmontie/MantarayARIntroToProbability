@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Vuforia;
 
 public class LessonLoader : MonoBehaviour {
 	public Camera c;
@@ -11,7 +12,7 @@ public class LessonLoader : MonoBehaviour {
 				currentLesson = "Lesson1";
 		}
 
-		gameObject.AddComponent (currentLesson);
+		this.gameObject.AddComponent (Type.GetType (currentLesson));
 
 		if (c != null) {
 			TurnOffAR();
@@ -19,11 +20,12 @@ public class LessonLoader : MonoBehaviour {
 	}
 
 	public void TurnOffAR() {
-		c.GetComponent<QCARBehaviour>().enabled = false;
+		c.GetComponentInParent<QCARBehaviour>().enabled = false;
 	}
 
 	public void TurnOnAR () {
-		c.GetComponent<QCARBehaviour> ().enabled = true;
+		c.GetComponentInParent<QCARBehaviour> ().PrimaryCamera = c;
+		c.GetComponentInParent<QCARBehaviour> ().enabled = true;
 	}
 
 	void OnGUI() {
