@@ -12,7 +12,7 @@ public class Lesson1 : MonoBehaviour
 		slides = new Slides("Lesson1");
 		
 		slides.Add(new Slide(
-			"Introduction to Basic Probability"
+			"Introduction to Basic Statistics"
 		));
 		
 		slides.Add(new Slide(
