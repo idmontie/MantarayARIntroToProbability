@@ -20,12 +20,12 @@ public class LessonLoader : MonoBehaviour {
 	}
 
 	public void TurnOffAR() {
-		c.GetComponentInParent<QCARBehaviour>().enabled = false;
+//		c.GetComponentInParent<QCARBehaviour>().enabled = false;
 	}
 
 	public void TurnOnAR () {
-		c.GetComponentInParent<QCARBehaviour> ().PrimaryCamera = c;
-		c.GetComponentInParent<QCARBehaviour> ().enabled = true;
+//		c.GetComponentInParent<QCARBehaviour> ().PrimaryCamera = c;
+//		c.GetComponentInParent<QCARBehaviour> ().enabled = true;
 	}
 
 	void OnGUI() {
