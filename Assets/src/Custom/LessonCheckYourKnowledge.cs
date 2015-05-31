@@ -15,16 +15,16 @@ public class Lesson9 : MonoBehaviour
 		Slides slides = new Slides("Lesson9");
 		
 		slides.Add(new Slide(
-			"Probability Quiz\n\nThe following quiz has ten questions.  Good luck!"
+			"Probability Quiz\n\nTo check your knowledge, please answer the following 10 questions. Good luck!"
 			));
 		// ----------------------- Question Slide 1 ---------------- //
 		Slide qSlide = new Slide("");
 		Question q = new Question();
-		q.SetText("If something is unlikely to happen, than it should have a probability of between...");
-		q.SetAnswers("0 and 0.5", "0.5 and 1", "1 and 2", "None of the above");
-		q.SetRightAnswer("0 and 0.5");
-		q.SetHint("The closer to 1 a probabiltiy, the more likely it is to happen.");
-		q.SetDescriptionOfRightAnswer("The closer to 1 a probabiltiy, the more likely it is to happen.");
+		q.SetText("If something is likely to happen, than it should have a probability of...");
+		q.SetAnswers("0", "0.5", "0.2", "1");
+		q.SetRightAnswer("1");
+		q.SetHint("The closer to 1 of probability the more likely it is to happen.");
+		q.SetDescriptionOfRightAnswer("The closer to 1 of probability the more likely it is to happen.");
 		
 		qSlide.AttachQuestion(q);
 		slides.Add (qSlide);
@@ -47,7 +47,7 @@ public class Lesson9 : MonoBehaviour
 		// ----------------------- Question Slide 3 ---------------- //
 		qSlide = new Slide("");
 		q = new Question();
-		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhat is the probability of selecting an orange jelly bean?");
+		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhat is the probability of randomly selecting an orange jelly bean?");
 		q.SetAnswers("3 out of 6", "1 out of 6", "2 out of 6", "4 out of 6");
 		q.SetRightAnswer("3 out of 6");
 		q.SetHint("Count the number of orange jelly beans and the total number of jelly beans.");
@@ -60,7 +60,7 @@ public class Lesson9 : MonoBehaviour
 		// ----------------------- Question Slide 4 ---------------- //
 		qSlide = new Slide("");
 		q = new Question();
-		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhat is the probability of selecting a lemon jelly bean?");
+		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhat is the probability of randomly selecting a lemon jelly bean?");
 		q.SetAnswers("3 out of 6", "1 out of 6", "2 out of 6", "4 out of 6");
 		q.SetRightAnswer("1 out of 6");
 		q.SetHint("Count the number of lemon jelly beans and the total number of jelly beans.");
@@ -73,7 +73,7 @@ public class Lesson9 : MonoBehaviour
 		// ----------------------- Question Slide 5 ---------------- //
 		qSlide = new Slide("");
 		q = new Question();
-		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhat is the probability of selecting a cherry jelly bean?");
+		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhat is the probability of randomly selecting a cherry jelly bean?");
 		q.SetAnswers("3 out of 6", "1 out of 6", "2 out of 6", "4 out of 6");
 		q.SetRightAnswer("2 out of 6");
 		q.SetHint("Count the number of cherry jelly beans and the total number of jelly beans.");
@@ -86,7 +86,7 @@ public class Lesson9 : MonoBehaviour
 		// ----------------------- Question Slide 6 ---------------- //
 		qSlide = new Slide("");
 		q = new Question();
-		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhich flavor would have the largest probability of selecting?");
+		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhich flavor would have the largest probability of being randomly selected?");
 		q.SetAnswers("Cherry", "Lemon", "Orange", "All equal");
 		q.SetRightAnswer("Orange");
 		q.SetHint("Count which flavor has the highest amount.");
@@ -99,7 +99,7 @@ public class Lesson9 : MonoBehaviour
 		// ----------------------- Question Slide 7 ---------------- //
 		qSlide = new Slide("");
 		q = new Question();
-		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhich flavor would have the lowest probability of selecting?");
+		q.SetText("We have a box of jelly beans with 3 orange, 1 lemon, and 2 cherry jelly beans inside it.  \n\nWhich flavor would have the lowest probability of being randomly selected?");
 		q.SetAnswers("Cherry", "Lemon", "Orange", "All equal");
 		q.SetRightAnswer("Lemon");
 		q.SetHint("Count which flavor has the lowest amount.");

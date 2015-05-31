@@ -11,7 +11,11 @@ public class Lesson6 : MonoBehaviour
 		slides = new Slides("Lesson6");
 		
 		slides.Add(new Slide(
-			"Exercise 2: Reporting Your Data\n\nAfter a day of investigating fish, your boss wants you to report your findings to him!  Let's convert some of our findings to make it easier to understand!"
+			"Exercise 2: Discovering Probability\n\nIn the following exercise, you will practice calculating probability."
+		));
+
+		slides.Add (new Slide (
+			"In this scenario, after a day of investigating fish, your boss wants you to report your findings to him!  Let's convert some of our findings to make it easier to understand!"
 		));
 		
 		// ----------------------- Question Slide ---------------- //

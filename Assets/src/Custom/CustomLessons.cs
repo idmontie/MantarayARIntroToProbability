@@ -17,32 +17,44 @@ public class CustomLessons
 	private CustomLessons ()
 	{
 		this.customLessons.Add(new Lesson(
-			"Lesson1", "Introduction"
-			));
+			"LessonIntroduction", "Introduction to Probability and Sampling"
+		));
+
 		this.customLessons.Add(new Lesson(
-			"Lesson2", "Objective"
-			));
+			"LessonSampling", "Sampling"
+		));
+
 		this.customLessons.Add(new Lesson(
-			"Lesson3", "What is Probability?"
-			));
-		this.customLessons.Add(new Lesson(
-			"Lesson4", "Exercise 1: Discovering Probability"
-			));
-		this.customLessons.Add(new Lesson(
-			"Lesson5", "Fractions, Decimals, and Percentages"
-			));
-		this.customLessons.Add(new Lesson(
-			"Lesson6", "Exercise 2: Reporting Your Data"
-			));
+			"LessonSamplePractice", "Exercise 1: Practice Taking a Sample"
+		));
+
 		this.customLessons.Add (new Lesson (
-			"Lesson7", "Exercise 3: The Investigation Continues!"
-				));
+			"LessonProbability", "Probability"
+		));
+
 		this.customLessons.Add(new Lesson(
-			"Lesson8", "Review"
-			));
+			"Lesson6", "Exercise 2: Discovering Probability"
+		));
+
+		this.customLessons.Add (new Lesson (
+			"LessonVariability", "Variability"
+		));
+
+		this.customLessons.Add (new Lesson (
+			"Lesson7", "Exercise 3: Exploring Variability"
+		));
+
 		this.customLessons.Add(new Lesson(
-			"Lesson9", "Probability Quiz"
-			));
+			"LessonReporting", "Reporting and Understanding Data"
+		));
+
+		this.customLessons.Add (new Lesson (
+			"LessonReview", "Review"
+		));
+
+		this.customLessons.Add(new Lesson(
+			"LessonCheckYourKnowledge", "Check Your Knowledge"
+		));
 	}
 	
 	/**
