@@ -33,7 +33,7 @@ public class CustomLessons
 		));
 
 		this.customLessons.Add(new Lesson(
-			"Lesson6", "Exercise 2: Discovering Probability"
+			"LessonProbabilityPractice", "Exercise 2: Discovering Probability"
 		));
 
 		this.customLessons.Add (new Lesson (
@@ -41,7 +41,7 @@ public class CustomLessons
 		));
 
 		this.customLessons.Add (new Lesson (
-			"Lesson7", "Exercise 3: Exploring Variability"
+			"LessonExploringVariability", "Exercise 3: Exploring Variability"
 		));
 
 		this.customLessons.Add(new Lesson(

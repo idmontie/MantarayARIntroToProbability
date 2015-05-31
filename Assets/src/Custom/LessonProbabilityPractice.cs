@@ -2,13 +2,13 @@ using System;
 using UnityEngine;
 
 
-public class Lesson6 : MonoBehaviour 
+public class LessonProbabilityPractice : MonoBehaviour 
 {
 	Slides slides = null;
 	
 	void Start ()
 	{
-		slides = new Slides("Lesson6");
+		slides = new Slides("LessonProbabilityPractice");
 		
 		slides.Add(new Slide(
 			"Exercise 2: Discovering Probability\n\nIn the following exercise, you will practice calculating probability."
