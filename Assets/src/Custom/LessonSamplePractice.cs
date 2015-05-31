@@ -27,7 +27,7 @@ public class LessonSamplePractice : MonoBehaviour
 			"Let's practice:\n" +
 			"1. To begin, locate the first area of water, called the Bay Area.\n" +
 			"2. Point the camera on your mobile device at the Bay Area.\n" +
-			"3. Take a sample the 10 fish in the water by tapping the fish on the screen."
+			"3. Take a sample of the 10 fish in the water by tapping the fish on the screen."
 		));
 
 		slides.Add (new Slide (
@@ -70,12 +70,13 @@ public class LessonSamplePractice : MonoBehaviour
 			"Based on that, we can assume that of the next 10 fish we randomly select from the lake, 3 will also be affected by the pollution."
 		));
 
+
 		// ----------------------- Question Slide ---------------- //
 		Slide qSlide = new Slide("");
 		Question q = new Question();
 		q.SetText("You have observed that 3 of 10 fish have been affected by pollution for this sample. How many fish would you expect to be affected by the oil spill if you sampled a total of 100 fish from the same lake?");
-		q.SetAnswers("10%", "30%", "50%", "100%");
-		q.SetRightAnswer("30%");
+		q.SetAnswers("10", "30", "50", "100");
+		q.SetRightAnswer("30");
 		q.SetHint("Take the number of fish that have been affected by oil and divide it by the total number of fish and multiply by 100.");
 		q.SetDescriptionOfRightAnswer("By calculating that 30% of your sample was infected, you can make an estimation that 30% of the 100 fish will also be affected by the oil spill, which is 30 fish.");
 		
@@ -83,6 +84,9 @@ public class LessonSamplePractice : MonoBehaviour
 		slides.Add (qSlide);
 		// -------------------------------------------------------- //
 
+		slides.Add (new Slide (
+			"That is how you take a sample of a population."
+		));
 
 		this.slides = slides;
 		

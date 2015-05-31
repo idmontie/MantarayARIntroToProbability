@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
-public class Lesson5 : MonoBehaviour
+public class LessonProbability : MonoBehaviour
 {
 	Slides slides = null;
 	
 	void Start ()
 	{
-		slides = new Slides ("Lesson5");
+		slides = new Slides ("LessonProbability");
 
 		slides.Add (new Slide (
 			"What is Probability?\n\nProbability deals with chance."

@@ -15,7 +15,8 @@ public class LessonIntroduction : MonoBehaviour
 		));
 		
 		slides.Add (new Slide (
-			"Whenever you ask yourself \"What is the chance that I will roll a two on a six-sided dice\" or similar questions you are dealing with probability."
+			//"Whenever you ask yourself \"What is the chance that I will roll a two on a six-sided dice\" or similar questions you are dealing with probability."
+			"This application's purpose is to teach and reinforce the basic concepts of sampling, probability and variance through Augmented Reality."
 		));
 		
 		slides.Add (new Slide (
@@ -32,7 +33,7 @@ public class LessonIntroduction : MonoBehaviour
 		));
 
 		slides.Add (new Slide(
-			"In order to get the most out of this mobile, you should have a firm understanding of basic math skills such as:\n" +
+			"In order to get the most out of this mobile application, you should have a firm understanding of basic math skills such as:\n" +
 			"\u2022 Addition\n" +
 			"\u2022 Subtraction\n" +
 			"\u2022 Multiplication\n" +
