@@ -31,7 +31,15 @@ public class LessonReview : MonoBehaviour
 			"\u2022 33%"
 		));
 
-		// TODO [Something about variability]
+		slides.Add (new Slide (
+			"We can measure variability between our samples by using different measurements of the \"spread\" of our data.\n\n" +
+			"The following are some ways to measure variability:\n" +
+			"\u2022 Range\n" +
+			"\u2022 Mean\n" +
+			"\u2022 Variance"
+		));
+
+
 		// TODO [Something about reading histograms]
 		
 		this.slides = slides;

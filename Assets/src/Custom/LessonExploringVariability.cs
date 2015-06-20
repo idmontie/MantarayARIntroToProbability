@@ -89,6 +89,75 @@ public class LessonExploringVariability : MonoBehaviour
 		slides.Add (qSlide);
 		// -------------------------------------------------------- //
 
+		// ----------------------- Question Slide ---------------- //
+		qSlide = new Slide("");
+		q = new Question();
+		q.SetText("Last time, we noticed that 3/10 fish were affected.  Is that a higher or lower percentage of fish than this time (which was 4/12)?");
+		q.SetAnswers("Higher", "Lower", "The Same", "");
+		q.SetHint ("Calculate what 3/10ths is and calculate what 4/12ths is as a percentage.");
+		q.SetRightAnswer("Lower");
+		//q.SetHint("The probability that the next fish is affected by oil is the same as the observed fraction of fish that have been affected by oil.");
+		q.SetDescriptionOfRightAnswer("That's right!  By counting more fish, we have discovered that the percentage of fish is actually lower than we originally estimated.");
+		
+		qSlide.AttachQuestion(q);
+		slides.Add (qSlide);
+		// -------------------------------------------------------- //
+
+		slides.Add (new Slide (
+			"Let's collect one more data set before we look into the variability of the data we have collected."
+		));
+		
+		// --------------------- Experience Slide ---------------- // 
+		arSlide = new Slide(
+			"Point your device at the Tributary Area."
+		);
+		
+		FishExperience e = new FishExperience(typeof(FishBehavior), arSlide);
+		e.SetTarget(GameObject.Find (assets.TributaryArea));
+		e.AddGameObject(assets.RandomHealthyFish());
+		e.AddGameObject(assets.RandomHealthyFish());
+		e.AddGameObject(assets.RandomHealthyFish());
+		e.AddGameObject(assets.RandomHealthyFish());
+		e.AddGameObject(assets.RandomHealthyFish());
+		e.AddGameObject(assets.RandomSickFish());
+		e.AddGameObject(assets.RandomSickFish());
+		e.AddGameObject(assets.RandomSickFish());
+		e.AddGameObject(assets.RandomSickFish());
+		e.AddGameObject(assets.RandomSickFish());
+		e.SetTotalNumberOfFish (10);
+		
+		arSlide.AttachExperience(e);
+		
+		slides.Add(arSlide);
+		// -------------------------------------------------------- //
+
+		// ----------------------- Question Slide ---------------- //
+		qSlide = new Slide("");
+		q = new Question();
+		q.SetText("So far, we have collected the following sets of data of the percentage of fish that have been affected: 30%, 33.3%, and 50%.\n\n"  +
+		          "What is the range of this data?");
+		q.SetAnswers("20", "33.3", "30", "50");
+		q.SetHint ("Remember that the range is the value of the largest data point minus the smallest data point.");
+		q.SetRightAnswer("20%");
+		q.SetDescriptionOfRightAnswer("That's right! By taking the largest data point (50%) and subtracting the smallest data point (30%), we get 20 as the range!");
+		
+		qSlide.AttachQuestion(q);
+		slides.Add (qSlide);
+		// -------------------------------------------------------- //
+
+		// ----------------------- Question Slide ---------------- //
+		qSlide = new Slide("");
+		q = new Question();
+		q.SetText("If you were to estimate the mean of 30%, 33.3%, and 50%, what would your approximation be?");
+		q.SetAnswers("20% - 30%", "35% - 40%", "50% - 60%", "0% - 10%");
+		q.SetHint ("If you are having trouble calculating the mean, try to visually imagine where the middle of 30, 33 and 50 would be.");
+		q.SetRightAnswer("35% - 40%");
+		q.SetDescriptionOfRightAnswer("Good job!  The exact mean is 37.7%!");
+		
+		qSlide.AttachQuestion(q);
+		slides.Add (qSlide);
+		// -------------------------------------------------------- //
+
 		this.slides = slides;
 	}
 	
