@@ -9,6 +9,7 @@ public class LessonExploringVariability : MonoBehaviour
 	
 	void Start ()
 	{
+		Assets assets = Assets.GetInstance();
 		Slides slides = new Slides("LessonExploringVariability");
 
 		slides.Add(new Slide(
@@ -23,11 +24,11 @@ public class LessonExploringVariability : MonoBehaviour
 		
 		// --------------------- Experience Slide ---------------- // 
 		Slide arSlide = new Slide(
-			"Point your device at Lake Eerie."
+			"Point your device at the Shallow Area."
 		);
 		
 		FishExperience e = new FishExperience(typeof(FishBehavior), arSlide);
-		e.SetTarget(GameObject.Find (assets.LakeErie));
+		e.SetTarget(GameObject.Find (assets.ShallowArea));
 		e.AddGameObject(assets.RandomHealthyFish());
 		e.AddGameObject(assets.RandomHealthyFish());
 		e.AddGameObject(assets.RandomHealthyFish());

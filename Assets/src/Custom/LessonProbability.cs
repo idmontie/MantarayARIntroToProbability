@@ -38,7 +38,7 @@ public class LessonProbability : MonoBehaviour
 		));
 
 		slides.Add (new Slide (
-			"Let's look at an example. If we have 3 sick fish out of 10, we would say that 30% of the fish are sick.\n\n"
+			"Let's look at an example. If we have 3 sick fish out of 10, we would say that 30% of the fish are sick.\n\n" +
 			"With ratios however, you compare the sick fish to the not sick fish. The ratio of sick fish to healthy fish is 3:7 (read as 3 to 7). In other words, the odds that a fish from this sample is 3 to 7."
 		));
 

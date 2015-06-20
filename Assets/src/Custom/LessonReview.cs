@@ -25,7 +25,7 @@ public class LessonReview : MonoBehaviour
 
 		slides.Add (new Slide (
 			"Probabilities can be expressed in different ways such as fractions, ratios and percentages.\n\n" +
-			"The following calculations are all the same representation of the same probability:\n"
+			"The following calculations are all the same representation of the same probability:\n" +
 			"\u2022 1/3\n" +
 			"\u2022 1:2\n" +
 			"\u2022 33%"

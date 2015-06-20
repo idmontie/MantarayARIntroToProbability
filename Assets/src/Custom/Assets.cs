@@ -7,8 +7,9 @@ public class Assets
 	private static Assets assets = null;
 	private System.Random random;
 	
-	public String LakeErie;
-	public String BayArea;
+	public String ShallowArea;
+	public String PierArea;
+	public String TributaryArea;
 	public List<GameObject> HealthyFish = new List<GameObject>();
 	public  List<GameObject> SickFish = new List<GameObject>();
 	
@@ -41,8 +42,9 @@ public class Assets
 		SickFish.Add(Resources.Load("ModelPrefabs/tench_affected") as GameObject);
 
 		// TODO update images
-		LakeErie = "ImageTarget";
-		BayArea  = "ImageTarget";
+		ShallowArea = "ShallowImageTarget";
+		PierArea  = "PierImageTarget";
+		TributaryArea  = "TributaryImageTarget";
 		
 		this.random = new System.Random();
 	}

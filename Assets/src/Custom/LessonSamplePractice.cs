@@ -38,11 +38,11 @@ public class LessonSamplePractice : MonoBehaviour
 			
 		// --------------------- Experience Slide ---------------- // 
 		Slide arSlide = new Slide(
-			"Point your device at Bay Area."
+			"Point your device at Pier Area."
 		);
 		
 		FishExperience e = new FishExperience(typeof(FishBehavior), arSlide);
-		e.SetTarget(GameObject.Find (assets.BayArea));
+		e.SetTarget(GameObject.Find (assets.PierArea));
 		e.AddGameObject(assets.RandomHealthyFish());
 		e.AddGameObject(assets.RandomHealthyFish());
 		e.AddGameObject(assets.RandomHealthyFish());

@@ -17,7 +17,7 @@ public class LessonReporting : MonoBehaviour
 		
 		// ----------------------- Question Slide 1 ---------------- //
 		Slide qSlide = new Slide("");
-		q = new Question();
+		Question q = new Question();
 		q.SetText("We have observed that 3 of 10 fish have been affected by pollution from one of our samples. How do we express that as a ratio of affected fish to not affected fish?");
 		q.SetAnswers("3:7", "7:3", "1:3","7:1");
 		q.SetRightAnswer("3:7");
